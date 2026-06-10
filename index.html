@@ -163,7 +163,12 @@
         Optional: We are considering a relaxed community run on Friday morning from the hotel to a coffee shop and back.
       </div>
 
-      <form action="mailto:alena.bertolotti@on-running.com,olly.laws@on-running.com" method="post" enctype="text/plain">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        
+        <input type="hidden" name="access_key" value="YOUR_KEY_HERE">
+        <input type="hidden" name="subject" value="New SS28 RSVP Submission">
+        <input type="checkbox" name="botcheck" style="display: none;">
+
         <fieldset>
           <legend>Attendance</legend>
           <div class="radio-row">
@@ -246,7 +251,7 @@
         </fieldset>
 
         <div class="btns">
-          <button type="submit">Submit RSVP by email</button>
+          <button type="submit">Submit RSVP</button>
           <a class="download" href="ss28_previews_rsvp_template.csv" download>Download CSV template</a>
         </div>
       </form>
@@ -258,5 +263,3 @@
   </main>
 </body>
 </html>
-
-```
