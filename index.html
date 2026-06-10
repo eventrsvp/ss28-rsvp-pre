@@ -4,24 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SS28 Pre-Views & Diamond League RSVP</title>
+
   <style>
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #f5f5f2;
+      background: #F5F5F2;
       color: #111;
     }
+
     .wrap {
       max-width: 860px;
       margin: 0 auto;
       padding: 48px 20px;
     }
+
     .card {
       background: #fff;
       border-radius: 24px;
       padding: 40px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
+
     .eyebrow {
       text-transform: uppercase;
       letter-spacing: 0.08em;
@@ -29,41 +33,55 @@
       color: #555;
       margin-bottom: 12px;
     }
+
     h1 {
       margin: 0 0 12px;
       font-size: 38px;
       line-height: 1.08;
     }
+
     .intro {
       font-size: 17px;
       line-height: 1.55;
       color: #333;
+      margin-bottom: 16px;
+    }
+
+    .deadline {
+      font-weight: 700;
       margin-bottom: 28px;
     }
+
     .notice {
-      background: #f1f1ec;
+      background: #F1F1EC;
       border-left: 4px solid #111;
       padding: 16px 18px;
       border-radius: 12px;
       margin-bottom: 28px;
       line-height: 1.5;
     }
+
     fieldset {
       border: 0;
       padding: 0;
-      margin: 0 0 28px;
+      margin: 0 0 32px;
     }
+
     legend {
       font-weight: 700;
       font-size: 18px;
       margin-bottom: 14px;
     }
+
     label {
       display: block;
       font-weight: 600;
       margin: 14px 0 6px;
     }
-    input, select, textarea {
+
+    input,
+    select,
+    textarea {
       width: 100%;
       box-sizing: border-box;
       border: 1px solid #ccc;
@@ -71,90 +89,168 @@
       padding: 12px;
       font-size: 15px;
       background: #fff;
-      font-family: Arial, Helvetica, sans-serif; 
+      font-family: Arial, Helvetica, sans-serif;
+      transition: border-color 0.2s ease;
     }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #111;
+    }
+
     textarea {
       min-height: 90px;
       resize: vertical;
     }
+
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 18px;
     }
-    .radio-row, .check-row {
+
+    /* Target fieldset specifically for whatsapp placement */
+    .grid-with-whatsapp {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    
+    .full-width-label {
+      grid-column: span 2;
+    }
+
+    .radio-row {
       display: flex;
-      gap: 14px;
+      gap: 16px;
       flex-wrap: wrap;
       margin-top: 8px;
     }
-    .radio-row label, .check-row label {
+
+    .radio-row label {
       display: flex;
       align-items: center;
       gap: 8px;
       font-weight: 500;
       margin: 0;
       width: auto;
+      cursor: pointer;
     }
-    .radio-row input, .check-row input {
+
+    .radio-row input {
       width: auto;
+      cursor: pointer;
     }
+
+    .check-block {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .check-block input {
+      width: auto;
+      margin-top: 4px;
+      cursor: pointer;
+    }
+
+    .check-block label {
+      font-weight: 500;
+      margin: 0;
+      line-height: 1.4;
+      cursor: pointer;
+    }
+
     .small {
       font-size: 13px;
       color: #555;
       line-height: 1.45;
-      margin-top: 8px;
+      margin-top: 12px;
     }
+
     .btns {
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
-      margin-top: 20px;
+      margin-top: 24px;
     }
-    button, .download {
+
+    button,
+    .download {
       border: 0;
       border-radius: 999px;
-      padding: 13px 20px;
+      padding: 13px 24px;
       font-size: 15px;
       font-weight: 700;
       cursor: pointer;
       text-decoration: none;
       display: inline-block;
+      transition: opacity 0.2s ease;
     }
+
+    button:hover,
+    .download:hover {
+      opacity: 0.9;
+    }
+
     button {
       background: #111;
       color: #fff;
     }
+
     .download {
-      background: #e6e6df;
+      background: #E6E6DF;
       color: #111;
     }
+
     .footer {
-      margin-top: 28px;
+      margin-top: 32px;
       font-size: 13px;
       color: #555;
       line-height: 1.45;
     }
+
     @media (max-width: 700px) {
-      .card { padding: 26px; }
-      h1 { font-size: 30px; }
-      .grid { grid-template-columns: 1fr; }
+      .card {
+        padding: 26px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .grid, .grid-with-whatsapp {
+        grid-template-columns: 1fr;
+      }
+      
+      .full-width-label {
+        grid-column: span 1;
+      }
     }
   </style>
 </head>
+
 <body>
   <main class="wrap">
     <section class="card">
       <div class="eyebrow">On Partner RSVP</div>
+
       <h1>SS28 Pre-Views & Diamond League</h1>
+
       <p class="intro">
         Please confirm your attendance for the SS28 Pre-Views & Diamond League experience in Zurich.
         At this stage, your only action is to confirm attendance and block the time in your calendar.
       </p>
 
+      <p class="deadline">RSVP deadline: 25 June 2026</p>
+
       <div class="notice">
         <strong>Please block:</strong><br />
-        Thursday, 27 August: full day recommended, as flight arrival times may vary. The program starts at 12:00.<br />
+        Thursday, 27 August: full day recommended, as flight arrival times may vary. The program starts at 12:00.
+        <br /><br />
         Friday, 28 August: until midday. There is no mandatory program on Friday. Hotel check-out will be by 12:00, and we are aiming to arrange return travel that allows guests to arrive back at their destination around lunchtime where possible, subject to flight availability.
         <br /><br />
         If you have a strong preference for either the earliest possible departure on 28 August or a later return flight, please indicate this in the Travel Preferences section below.
@@ -165,87 +261,129 @@
       </div>
 
       <form action="https://api.web3forms.com/submit" method="POST">
-        
-        <input type="hidden" name="access_key" value="1b62d546-4ee0-4a9f-9235-761bbeb14cb1">
-        <input type="hidden" name="subject" value="New SS28 RSVP Submission">
-        <input type="checkbox" name="botcheck" style="display: none;">
+        <input type="hidden" name="access_key" value="1b62d546-4ee0-4a9f-9235-761bbeb14cb1" />
+        <input type="hidden" name="subject" value="New SS28 RSVP Submission" />
+        <input type="hidden" name="from_name" value="SS28 RSVP Form" />
+        <input type="hidden" name="Event" value="SS28 Pre-Views & Diamond League" />
+        <input type="checkbox" name="botcheck" style="display: none;" />
 
         <fieldset>
           <legend>Attendance</legend>
           <div class="radio-row">
-            <label><input type="radio" name="Attendance" value="Yes attending" required /> Yes, attending</label>
-            <label><input type="radio" name="Attendance" value="No, not attending" /> No, not attending</label>
-            <label><input type="radio" name="Attendance" value="Pending confirmation" /> Pending confirmation</label>
+            <label>
+              <input type="radio" name="Attendance" value="Yes attending" required checked />
+              Yes, attending
+            </label>
+            <label>
+              <input type="radio" name="Attendance" value="No, not attending" />
+              No, not attending
+            </label>
+            <label>
+              <input type="radio" name="Attendance" value="Pending confirmation" />
+              Pending confirmation
+            </label>
           </div>
         </fieldset>
 
         <fieldset>
           <legend>Participant details</legend>
-          <div class="grid">
+          <div class="grid-with-whatsapp">
             <div>
               <label for="fullName">Full name *</label>
               <input id="fullName" name="Full Name" type="text" required />
             </div>
+
             <div>
               <label for="company">Company / retailer *</label>
               <input id="company" name="Company / Retailer" type="text" required />
             </div>
+
             <div>
               <label for="email">Email *</label>
               <input id="email" name="Email" type="email" required />
             </div>
+
             <div>
               <label for="phone">Phone number *</label>
               <input id="phone" name="Phone Number" type="tel" required />
             </div>
-          </div>
-          <label for="whatsapp">Can we contact you via WhatsApp?</label>
-          <select id="whatsapp" name="WhatsApp">
-            <option value="">Please select</option>
-            <option>Yes</option>
-            <option>No</option>
-          </select>
-        </fieldset>
 
-        <fieldset>
-          <legend>Travel logistics</legend>
-          <div class="grid">
-            <div>
-              <label for="departureAirport">Departure airport for arrival in Zurich on 27 August *</label>
-              <input id="departureAirport" name="Departure Airport - 27 August" type="text" placeholder="e.g. London Heathrow / Amsterdam Schiphol" required />
-            </div>
-            <div>
-              <label for="returnAirport">Return destination airport on 28 August *</label>
-              <input id="returnAirport" name="Return Destination Airport - 28 August" type="text" placeholder="e.g. London Heathrow / Amsterdam Schiphol" required />
+            <div class="full-width-label">
+              <label for="whatsapp">Can we contact you via WhatsApp? *</label>
+              <select id="whatsapp" name="WhatsApp" required>
+                <option value="">Please select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
             </div>
           </div>
-          <label for="travelNotes">Travel Preferences & Flight Requests</label>
-          <textarea id="travelNotes" name="Travel Preferences & Flight Requests" placeholder="Please let us know if you have any preferred departure times, airport preferences, or specific travel constraints. If you would prefer the earliest possible flight on 28 August or a later return option, please indicate this here."></textarea>
         </fieldset>
 
-        <fieldset>
-          <legend>Hospitality</legend>
-          <label for="dietary">Dietary preference</label>
-          <input id="dietary" name="Dietary Preference" type="text" placeholder="e.g. vegetarian, vegan, halal, none" />
+        <div id="logisticsSection">
+          <fieldset>
+            <legend>Travel logistics</legend>
+            <div class="grid">
+              <div>
+                <label for="departureAirport">Departure airport for arrival in Zurich on 27 August <span class="req-star">*</span></label>
+                <input
+                  id="departureAirport"
+                  name="Departure Airport - 27 August"
+                  type="text"
+                  placeholder="e.g. London Heathrow / Amsterdam Schiphol"
+                  required
+                />
+              </div>
 
-          <label for="restrictions">Dietary restrictions / allergies</label>
-          <textarea id="restrictions" name="Dietary Restrictions / Allergies"></textarea>
+              <div>
+                <label for="returnAirport">Return destination airport on 28 August <span class="req-star">*</span></label>
+                <input
+                  id="returnAirport"
+                  name="Return Destination Airport - 28 August"
+                  type="text"
+                  placeholder="e.g. London Heathrow / Amsterdam Schiphol"
+                  required
+                />
+              </div>
+            </div>
 
-          <label for="accessibility">Accessibility needs</label>
-          <textarea id="accessibility" name="Accessibility Needs"></textarea>
+            <label for="travelNotes">Travel Preferences, Flight Requests & Scheduling Constraints</label>
+            <textarea
+              id="travelNotes"
+              name="Travel Preferences & Flight Requests"
+              placeholder="Please let us know if you have preferred departure times, airport preferences, scheduling constraints, or a strong preference for either the earliest or latest available flight on 28 August."
+            ></textarea>
+          </fieldset>
 
-          <label for="other">Other information</label>
-          <textarea id="other" name="Other Information"></textarea>
-        </fieldset>
+          <fieldset>
+            <legend>Hospitality</legend>
+            <label for="dietary">Dietary preference</label>
+            <input
+              id="dietary"
+              name="Dietary Preference"
+              type="text"
+              placeholder="e.g. vegetarian, vegan, halal, none"
+            />
+
+            <label for="restrictions">Dietary restrictions / allergies</label>
+            <textarea id="restrictions" name="Dietary Restrictions / Allergies"></textarea>
+
+            <label for="accessibility">Accessibility needs</label>
+            <textarea id="accessibility" name="Accessibility Needs"></textarea>
+
+            <label for="other">Other information</label>
+            <textarea id="other" name="Other Information"></textarea>
+          </fieldset>
+        </div>
 
         <fieldset>
           <legend>Data consent</legend>
-          <div class="check-row">
-            <label>
-              <input type="checkbox" name="Consent" value="Agreed" required />
+          <div class="check-block">
+            <input type="checkbox" id="consent" name="Consent" value="Agreed" required />
+            <label for="consent">
               I agree that the details provided may be used by On for event, travel, hotel and hospitality logistics related to SS28 Pre-Views & Diamond League.
             </label>
           </div>
+
           <p class="small">
             Passport details are not required at this RSVP stage. If attendance is confirmed, On will follow up with proposed flight details and request any required booking information separately.
           </p>
@@ -253,9 +391,49 @@
 
         <div class="btns">
           <button type="submit">Submit RSVP</button>
-          <a class="download" href="data:text/csv;charset=utf-8,Full%20Name%2CCompany%20%2F%20Retailer%2CEmail%2CPhone%20Number%2CWhatsApp%2CDeparture%20Airport%2CReturn%20Airport%2CTravel%20Preferences%2CDietary%20Preference%2CDietary%20Restrictions%2CAccessibility%2COther%20Information%0A" download="ss28_previews_rsvp_template.csv">Download CSV template</a>
+          <a
+            class="download"
+            href="data:text/csv;charset=utf-8,Event%2CAttendance%2CFull%20Name%2CCompany%20%2F%20Retailer%2CEmail%2CPhone%20Number%2CWhatsApp%2CDeparture%20Airport%20-%2027%20August%2CReturn%20Destination%20Airport%20-%2028%20August%2CTravel%20Preferences%20%26%20Flight%20Requests%2CDietary%20Preference%2CDietary%20Restrictions%20%2F%20Allergies%2CAccessibility%20Needs%2COther%20Information%2CConsent%0A"
+            download="ss28_previews_rsvp_template.csv"
+          >
+            Download CSV template
+          </a>
         </div>
       </form>
 
       <p class="footer">
-        RSVP deadline: 25 June. For questions, please contact Al
+        RSVP deadline: 25 June 2026.<br />
+        For questions, please contact Alena Bertolotti or Olly Laws.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    const attendanceRadios = document.querySelectorAll('input[name="Attendance"]');
+    const departureInput = document.getElementById('departureAirport');
+    const returnInput = document.getElementById('returnAirport');
+    const reqStars = document.querySelectorAll('.req-star');
+
+    function toggleRequiredLogistics() {
+      const selectedAttendance = document.querySelector('input[name="Attendance"]:checked').value;
+      
+      if (selectedAttendance === 'Yes attending') {
+        departureInput.required = true;
+        returnInput.required = true;
+        reqStars.forEach(star => star.style.display = 'inline');
+      } else {
+        departureInput.required = false;
+        returnInput.required = false;
+        reqStars.forEach(star => star.style.display = 'none');
+      }
+    }
+
+    attendanceRadios.forEach(radio => {
+      radio.addEventListener('change', toggleRequiredLogistics);
+    });
+
+    // Run on layout initialization
+    toggleRequiredLogistics();
+  </script>
+</body>
+</html>
