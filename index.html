@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SS28 Pre-Views & Diamond League RSVP</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f5f2;
+      color: #111;
+    }
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 12px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 38px;
+      line-height: 1.08;
+    }
+    .intro {
+      font-size: 17px;
+      line-height: 1.55;
+      color: #333;
+      margin-bottom: 28px;
+    }
+    .notice {
+      background: #f1f1ec;
+      border-left: 4px solid #111;
+      padding: 16px 18px;
+      border-radius: 12px;
+      margin-bottom: 28px;
+      line-height: 1.5;
+    }
+    fieldset {
+      border: 0;
+      padding: 0;
+      margin: 0 0 28px;
+    }
+    legend {
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 14px;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin: 14px 0 6px;
+    }
+    input, select, textarea {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 15px;
+      background: #fff;
+    }
+    textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .radio-row, .check-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .radio-row label, .check-row label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+      margin: 0;
+      width: auto;
+    }
+    .radio-row input, .check-row input {
+      width: auto;
+    }
+    .small {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.45;
+      margin-top: 8px;
+    }
+    .btns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    button, .download {
+      border: 0;
+      border-radius: 999px;
+      padding: 13px 20px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    button {
+      background: #111;
+      color: #fff;
+    }
+    .download {
+      background: #e6e6df;
+      color: #111;
+    }
+    .footer {
+      margin-top: 28px;
+      font-size: 13px;
+      color: #555;
+      line-height: 1.45;
+    }
+    @media (max-width: 700px) {
+      .card { padding: 26px; }
+      h1 { font-size: 30px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <div class="eyebrow">On Partner RSVP</div>
+      <h1>SS28 Pre-Views & Diamond League</h1>
+      <p class="intro">
+        Please confirm your attendance for the SS28 Pre-Views & Diamond League experience in Zurich.
+        At this stage, your only action is to confirm attendance and block the time in your calendar.
+      </p>
+
+      <div class="notice">
+        <strong>Please block:</strong><br />
+        Thursday, 27 August: full day recommended, as flight arrival times may vary. The program starts at 12:00.<br />
+        Friday, 28 August: until midday. There is no mandatory program on Friday. Hotel check-out will be by 12:00, and we are aiming to arrange return travel that allows guests to arrive back at their destination around lunchtime where possible, subject to flight availability.
+        <br /><br />
+        If you have a strong preference for either the earliest possible departure on 28 August or a later return flight, please indicate this in the Travel Preferences section below.
+        <br /><br />
+        On will arrange flights and hotel. A follow-up email will include proposed flight options and, at that stage, we will request any required passport details for booking.
+        <br /><br />
+        Optional: We are considering a relaxed community run on Friday morning from the hotel to a coffee shop and back.
+      </div>
+
+      <form action="mailto:alena.bertolotti@on-running.com,olly.laws@on-running.com" method="post" enctype="text/plain">
+        <fieldset>
+          <legend>Attendance</legend>
+          <div class="radio-row">
+            <label><input type="radio" name="Attendance" value="Yes attending" required /> Yes, attending</label>
+            <label><input type="radio" name="Attendance" value="No, not attending" /> No, not attending</label>
+            <label><input type="radio" name="Attendance" value="Pending confirmation" /> Pending confirmation</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Participant details</legend>
+          <div class="grid">
+            <div>
+              <label for="fullName">Full name *</label>
+              <input id="fullName" name="Full Name" type="text" required />
+            </div>
+            <div>
+              <label for="company">Company / retailer *</label>
+              <input id="company" name="Company / Retailer" type="text" required />
+            </div>
+            <div>
+              <label for="email">Email *</label>
+              <input id="email" name="Email" type="email" required />
+            </div>
+            <div>
+              <label for="phone">Phone number *</label>
+              <input id="phone" name="Phone Number" type="tel" required />
+            </div>
+          </div>
+          <label for="whatsapp">Can we contact you via WhatsApp?</label>
+          <select id="whatsapp" name="WhatsApp">
+            <option value="">Please select</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Travel logistics</legend>
+          <div class="grid">
+            <div>
+              <label for="departureAirport">Departure airport for arrival in Zurich on 27 August *</label>
+              <input id="departureAirport" name="Departure Airport - 27 August" type="text" placeholder="e.g. London Heathrow / Amsterdam Schiphol" required />
+            </div>
+            <div>
+              <label for="returnAirport">Return destination airport on 28 August *</label>
+              <input id="returnAirport" name="Return Destination Airport - 28 August" type="text" placeholder="e.g. London Heathrow / Amsterdam Schiphol" required />
+            </div>
+          </div>
+          <label for="travelNotes">Travel Preferences & Flight Requests</label>
+          <textarea id="travelNotes" name="Travel Preferences & Flight Requests" placeholder="Please let us know if you have any preferred departure times, airport preferences, or specific travel constraints. If you would prefer the earliest possible flight on 28 August or a later return option, please indicate this here."></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Hospitality</legend>
+          <label for="dietary">Dietary preference</label>
+          <input id="dietary" name="Dietary Preference" type="text" placeholder="e.g. vegetarian, vegan, halal, none" />
+
+          <label for="restrictions">Dietary restrictions / allergies</label>
+          <textarea id="restrictions" name="Dietary Restrictions / Allergies"></textarea>
+
+          <label for="accessibility">Accessibility needs</label>
+          <textarea id="accessibility" name="Accessibility Needs"></textarea>
+
+          <label for="other">Other information</label>
+          <textarea id="other" name="Other Information"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Data consent</legend>
+          <div class="check-row">
+            <label>
+              <input type="checkbox" name="Consent" value="Agreed" required />
+              I agree that the details provided may be used by On for event, travel, hotel and hospitality logistics related to SS28 Pre-Views & Diamond League.
+            </label>
+          </div>
+          <p class="small">
+            Passport details are not required at this RSVP stage. If attendance is confirmed, On will follow up with proposed flight details and request any required booking information separately.
+          </p>
+        </fieldset>
+
+        <div class="btns">
+          <button type="submit">Submit RSVP by email</button>
+          <a class="download" href="ss28_previews_rsvp_template.csv" download>Download CSV template</a>
+        </div>
+      </form>
+
+      <p class="footer">
+        RSVP deadline: 25 June. For questions, please contact Alena Bertolotti or Olly Laws.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
+
+```
