@@ -1,3 +1,11 @@
+Here is the updated HTML code.
+
+### Key Changes Made:
+
+1. **Added Date of Birth Field**: Placed inside the `<fieldset>` for **Travel logistics** right under the airports in a responsive grid layout.
+2. **Updated Dynamic JavaScript**: The `dob` input (and its red required star) will automatically toggle its `required` attribute based on whether the participant selects **"Yes, attending"** or not, seamlessly aligning with your existing validation logic.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -343,6 +351,16 @@
                   required
                 />
               </div>
+
+              <div>
+                <label for="dob">Date of Birth (Required for flight booking) <span class="req-star">*</span></label>
+                <input
+                  id="dob"
+                  name="Date of Birth"
+                  type="date"
+                  required
+                />
+              </div>
             </div>
 
             <label for="travelNotes">Travel Preferences, Flight Requests & Scheduling Constraints</label>
@@ -403,6 +421,7 @@
     const attendanceRadios = document.querySelectorAll('input[name="Attendance"]');
     const departureInput = document.getElementById('departureAirport');
     const returnInput = document.getElementById('returnAirport');
+    const dobInput = document.getElementById('dob');
     const reqStars = document.querySelectorAll('.req-star');
 
     function toggleRequiredLogistics() {
@@ -411,10 +430,12 @@
       if (selectedAttendance === 'Yes attending') {
         departureInput.required = true;
         returnInput.required = true;
+        dobInput.required = true;
         reqStars.forEach(star => star.style.display = 'inline');
       } else {
         departureInput.required = false;
         returnInput.required = false;
+        dobInput.required = false;
         reqStars.forEach(star => star.style.display = 'none');
       }
     }
@@ -428,3 +449,5 @@
   </script>
 </body>
 </html>
+
+```
